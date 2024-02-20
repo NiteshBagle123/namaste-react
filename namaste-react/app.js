@@ -1,26 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement(
-    "div", 
-    { id: "parent" }, 
-    [
-        React.createElement(
-            "div", 
-            { id: "children1" },
-            [
-                React.createElement("h1" , { id: "heading", key: "1" }, "Hello World1!!!"),
-                React.createElement("h2" , { id: "heading1", key: "2" }, "Hello World2!!!")
-            ]
-        ),
-        React.createElement(
-            "div",
-            { id: "children2" },
-            [
-                React.createElement("h1" , { id: "heading2", key: "11" }, "Hello World1!!!"),
-                React.createElement("h2" , { id: "heading3", key: "22" }, "Hello World2!!!")
-            ]
-        )
-    ]
+
+// react element is object and when render on dom it becomes html element
+// JSX is not html --> It is html like or xml like syntax
+// JSX code is transpiled before it reaches to JS engine done by parcel - babel transpiler
+// React component --> class based and functional
+
+const App = () => (
+    <div>
+        <p id="heading">Namaste React App!</p>
+    </div>
 );
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+
+// function App () {
+//     return (
+//         <div>
+//             <p id="heading">Namaste React App!</p>
+//         </div> 
+//     );
+// }
+
+// class App extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 <p id="heading">Namaste React App!</p>
+//             </div>
+//         )
+//     }
+// }
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+
