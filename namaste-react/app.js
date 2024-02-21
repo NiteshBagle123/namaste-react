@@ -28,7 +28,7 @@ const Header = () => {
     )
 }
 
-const RestaurantCard = () => {
+const RestaurantCard = ({ name, cuisines, rating, eta }) => {
     return (
         <div className="res-card" style={{
             backgroundColor: "#f0f0f0"
@@ -38,10 +38,10 @@ const RestaurantCard = () => {
                 alt="res-logo"
                 src="https://www.fusion6.com.au/wp-content/uploads/2022/09/popular-indian-dishes-cuisine.jpg"
             />
-            <h3>Meghna foods</h3>
-            <h4>North Indian, Asian</h4>
-            <h4>4.4 Stars</h4>
-            <h4>38 minutes</h4>
+            <h3>{name}</h3>
+            <h4>{cuisines}</h4>
+            <h4>{rating}</h4>
+            <h4>{eta}</h4>
         </div>
     )
 }
@@ -51,11 +51,18 @@ const Body = () => {
         <div className="body">
             <div className="search">Search</div>
             <div className="res-container">
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
+                <RestaurantCard 
+                    name="Meghna Foods"
+                    cuisines="North Indian, Asian"
+                    rating="4.4 Stars"
+                    eta="38 minutes"
+                />
+                <RestaurantCard 
+                    name="KFC"
+                    cuisines="Chicken Special"
+                    rating="4.0 Stars"
+                    eta="45 minutes"
+                />
             </div>
         </div>
     )
