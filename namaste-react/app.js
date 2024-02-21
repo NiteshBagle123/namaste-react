@@ -13,8 +13,8 @@ import ReactDOM from "react-dom/client";
 const Header = () => {
     return (
         <div className="header">
-            <div className="logo">
-                <img src="https://image.freepik.com/free-vector/food-app-icon-logo_29069-50.jpg"/>
+            <div className="logo-container">
+                <img className="logo "src="https://image.freepik.com/free-vector/food-app-icon-logo_29069-50.jpg"/>
             </div>
             <div className="nav-items">
                 <ul>
@@ -27,10 +27,44 @@ const Header = () => {
         </div>
     )
 }
+
+const RestaurantCard = () => {
+    return (
+        <div className="res-card" style={{
+            backgroundColor: "#f0f0f0"
+        }}>
+            <img
+                className="res-logo"
+                alt="res-logo"
+                src="https://www.fusion6.com.au/wp-content/uploads/2022/09/popular-indian-dishes-cuisine.jpg"
+            />
+            <h3>Meghna foods</h3>
+            <h4>North Indian, Asian</h4>
+            <h4>4.4 Stars</h4>
+            <h4>38 minutes</h4>
+        </div>
+    )
+}
+
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+            </div>
+        </div>
+    )
+}
 const AppLayout = () => {
     return (
         <div className="app">
             <Header />
+            <Body />
         </div>
     )
 }
