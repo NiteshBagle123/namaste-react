@@ -38,9 +38,11 @@ export default Body = () => {
     return (
         <div className="body">
             <div className='filter'>
-                <input type='text' className='search-box' value={searchText} onChange={(event) => {
-                    setSearchText(event.target.value);
-                }}/>
+                <div className='search m-4 p-4'>
+                    <input type='text' className='border border-solid-black' value={searchText} onChange={(event) => {
+                        setSearchText(event.target.value);
+                    }}/>
+                </div>
                 <button onClick={() => {
                     setFilteredRestaurant(restaurantList.filter(resDetail => resDetail.resName.toLowerCase().includes(searchText)))
                 }}>Search</button>
