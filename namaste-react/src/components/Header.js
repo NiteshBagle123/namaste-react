@@ -6,7 +6,7 @@ export default Header = () => {
     const [btnName, setBtnName] = useState("login");
     const onlineStatus = useOnlineStatus();
     return (
-        <div className="flex justify-between bg-pink-100 shadow-lg mb-2">
+        <div className="flex justify-between bg-pink-100 shadow-lg mb-2 sm:bg-yellow-50 lg:bg-green-50">
             <div className="logo-container">
                 <img 
                     className="w-56"
